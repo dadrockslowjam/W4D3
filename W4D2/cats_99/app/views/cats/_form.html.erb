@@ -1,0 +1,53 @@
+<form action='' method=''>
+
+<label for="cat_name">Name</label>
+<input
+    type="text"
+    name="cat[name]"
+    id="cat_name"
+    value="<%cat.name%>">
+
+<label for="cat_sex_male">Male</label>
+<input
+    type="radio"
+    name="cat[sex]"
+    value="M"
+    id="cat_sex_male"
+    <%= cat.sex == "M" ? "checked" : "" %>>
+
+<label for="cat_sex_female">Female</label>
+<input
+    type="radio"
+    name="cat[sex]"
+    value="F"
+    id="cat_sex_female"
+    <%= cat.sex == "F" ? "checked" : "" %>>
+
+<label for="cat_color">Pick a color</label>
+<select id="cat_color">
+    <option value="">--Please choose an option--</option>
+        <option value="brown">Brown</option>
+        <option value="black">Black</option>
+        <option value="green">Green</option>
+        <option value="orange">Orange</option>
+        <option value="white">White</option>
+        <option value="red">Red</option>
+        <option value="blue">Blue</option>
+</select>
+
+<label for="birth_date">Pick a born day brah</label>
+<input type="date" id="birth_date" name="cat[birth_date]"
+    value="<%cat.birth_date%>" min = "2018-01-01" max = "2018-12-31">
+    
+<label for="description">What it do furrball???</label>
+<textarea id="description" name="cat[description]" 
+          rows ='10' cols='30'></textarea>
+
+
+
+
+
+
+
+
+</form>
